@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homeCSS.css">
+</head>
+<body>
+    <header>
+        <nav class="top-navbar">
+            <ul>
+                <li><a href="/about">About</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="/api/auth/logout" class="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 class="sofia-regular">MindSpace</h2>
+        <p>What are you feeling to do today?!</p>
+        <div class="button-container">
+            <div class="row">
+            <button class="button orange" onclick="writeThoughts()">Write your thoughts</button>
+            <button class="button green" onclick="talkCommunity()">Talk to the community</button>
+            <button class="button yellow" onclick="watchVideo()">Watch a Video</button>
+        </div>
+        <div class="row center">
+            <button class="button yellow" onclick="findTherapist()">Find a Therapist near me</button>
+            <button class="button orange" onclick="takeQuiz()">Take a Quiz!</button>
+        </div>
+        </div>
+    </main>
+
+    
+    <script>
+        function writeThoughts() {
+            window.location.assign("/journal");
+        }
+        function talkCommunity() {
+            //alert('Sorry the Page is under Construction!');
+            window.location.assign("/forum");
+        }
+        function watchVideo() {
+            window.location.assign("/relaxVideos");
+        }
+        function findTherapist() {
+            window.location.assign("/findTherapist");
+        }
+        function takeQuiz() {
+            window.location.assign("/quiz");
+        }
+    </script>
+</body>
+</html>

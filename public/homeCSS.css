@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url('back.jpg') no-repeat center center/cover;
+    color: blue;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+  overflow-x: hidden;
+}
+
+.sofia-regular {
+  font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+h2{
+    font-size: 200px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    color: #C47A8D;
+    font-style: B;
+    font-family:Brixton;
+    font-style: normal;
+}
+/* h3{
+    font-size: 2rem;
+    color: #C597A0;
+    font-family:Brixton;
+    font-style: normal;
+} */
+p{
+    font-size: 2.7rem;
+    color: #C597A0;
+    font-family:Brixton;
+    font-style: normal;
+}
+/* Navbar Container */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.3); /* transparent white */
+    backdrop-filter: blur(10px); /* frosted glass effect */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    padding: 0 ;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .top-navbar ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  /* Nav Items */
+  .top-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+  }
+  
+  /* Links */
+  .top-navbar ul li a {
+    color: #3a3a69; /* muted navy */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .top-navbar ul li a:hover {
+    background-color: rgba(58, 58, 105, 0.1);
+    color: #1a1a40;
+  }
+  
+  /* Logout button - highlighted */
+  .top-navbar ul li a.logout {
+    font-weight: bold;
+    padding: 8px 12px;
+    background-color: rgba(255, 182, 193, 0.3); /* light pastel pink */
+    color: #b22234; /* darker red-pink tone */
+  }
+  
+  .top-navbar ul li a.logout:hover {
+    background-color: rgba(255, 182, 193, 0.5);
+    color: #a51c30;
+  }
+  
+/* Main Content */
+main {
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 70px;
+    margin-bottom: 70px;
+    font-family:Brixton;
+    font-style: normal;
+
+}
+
+p {
+    font-size: 2rem;
+    margin-top: 50px;
+    font-family:Brixton;
+    font-style: italic;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 90px;
+    size: 30px;
+}
+
+/* Row Styles */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Center the second row */
+.row.center {
+    justify-content: center;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color:white;
+    text-align: center;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Button Colors */
+.orange {
+    background-color: #CCA1C9;
+}
+
+.green {
+    background-color: #FFD3DD;
+}
+
+.yellow {
+    background-color: #F3A0AD;
+}
+.orange:hover {
+  background-color: #b688bb;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.green:hover {
+  background-color: #fcbec9;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.yellow:hover {
+  background-color: #e88b98;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+/* Footer Patterns */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-pattern,
+.right-pattern {
+    width: 100px;
+    height: 100px;
+    background-color: transparent; /* Replace with background image */
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Quiz!</title>
+    <link rel="stylesheet" href="quizCSS.css">
+    <script>
+        let currentIndex = 0;
+        let answers = [];
+
+        async function loadQuestion() {
+            const response = await fetch(`/api/quiz/question/${currentIndex}`);
+            const data = await response.json();
+            if (data.question) {
+                document.getElementById("question").innerText = data.question.text;
+                const optionsContainer = document.getElementById("options");
+                optionsContainer.innerHTML = "";
+                data.question.options.forEach(option => {
+                    const button = document.createElement("button");
+                    button.innerText = option.text;
+                    button.onclick = () => selectOption(option.points);
+                    optionsContainer.appendChild(button);
+                });
+            } else {
+                submitQuiz();
+            }
+        }
+
+        function selectOption(points) {
+            answers.push({ points });
+            currentIndex++;
+            loadQuestion();
+        }
+
+        async function submitQuiz() {
+            const response = await fetch("/api/quiz/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ answers })
+            });
+            const result = await response.json();
+
+            let buttonsHtml = result.buttons.map(btn => {
+    if (btn === "button1") {
+        return `<button id="button1" class="quiz-button">Relaxation Help</button>`;
+    } else if (btn === "button2") {
+        return `<button id="button2" class="quiz-button">Find a Therapist</button>`;
+    } else {
+        return `<button class="quiz-button">${btn}</button>`;
+    }
+}).join("");
+
+
+    document.getElementById("quiz-container").innerHTML = `
+        <h2>${result.message}</h2>
+        ${buttonsHtml}
+    `;
+
+    document.getElementById("button2")?.addEventListener("click", function () {
+        window.location.href = "/findTherapist";
+    });
+
+    document.getElementById("button1")?.addEventListener("click", function () {
+        window.location.href="/relaxVideos";
+    });
+}
+
+        window.onload = loadQuestion;
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <ul class="nav-links">
+            <!-- <li><a href="javascript:history.back()">← Back</a></li> -->
+            <li><a href="/homepage">Home</a></li>
+            <li><a href="/journal">Journal</a></li>
+            <li><a href="/forum">Forum</a></li>
+            <li><a href="/findTherapist">Therapist</a></li>
+            <li><a href="/relaxVideos">Videos</a></li>
+            <li><a href="/quiz">Quiz</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- Spacer to push page content below navbar -->
+      <div style="margin-top: 50px;"></div>
+    <h1 id="heading">Quiz!</h1>
+    <div id="quiz-container">
+        <h1 id="question"></h1>
+        <div id="options"></div>
+    </div>
+</body>
+</html>

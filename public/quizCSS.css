@@ -1,0 +1,119 @@
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFADAD;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #b2dfdb;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-start; /* align left */
+    gap: 20px
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    background-color: #a5d6d3;
+    border-radius: 5px;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 8px 14px;
+    text-decoration: none;
+    color: #04474d;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #ffffff;
+    background-color: #80cdd2;
+}
+
+/* Page heading below navbar */
+#heading {
+    background-color: #FFD9D9;
+    padding: 20px;
+    color: #c37892;
+    font-family: Brixton, serif;
+    font-size: 28px;
+   /* margin-top: 70px;  Space for navbar */
+}
+
+/* Quiz container */
+#quiz-container {
+    background: #FFECD9;
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Quiz question */
+#question {
+    font-size: 22px;
+    color: #F68BA2;
+    margin-bottom: 20px;
+}
+
+/* Option buttons */
+#options button {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8F99FB;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: Brixton, serif;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+#options button:hover {
+    background-color: #6c7ae0;
+}
+
+.quiz-button {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8F99FB;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: Brixton, serif;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+    background-color: #6c7ae0;
+}
+

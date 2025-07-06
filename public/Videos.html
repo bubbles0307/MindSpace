@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">			
+	<link href="VideosCSS.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+          <ul class="nav-links">
+            <!-- <li><a href="javascript:history.back()">← Back</a></li> -->
+            <li><a href="/homepage">Home</a></li>
+            <li><a href="/journal">Journal</a></li>
+            <li><a href="/forum">Forum</a></li>
+            <li><a href="/findTherapist">Therapist</a></li>
+            <li><a href="/relaxVideos">Videos</a></li>
+            <li><a href="/quiz">Quiz</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- Spacer to push page content below navbar -->
+      <div style="margin-top: 60px;"></div>
+
+        <h1 id="heading">Relaxation Videos For you!</h1>
+
+            <div id="images" class="container-fluid" onchange="handleSelect()">
+                <div id="index">
+                    <h2>Tap on the option to watch desired content!</h2>
+                    <select size="9" id="Game">
+                        <option value="meditation">Guided Meditation Videos</option>
+                        <option value="nature_sounds">Nature Sounds</option>
+                        <option value="asmr">ASMR Videos</option>
+                        <option value="relax_music">Relaxing Music(Lofi)</option>
+                        <option value="animal_video">Wholesome Animal Videos</option>
+                        <option value="studio_ghibli">Studio Ghibli-Inspired</option>
+                        <option value="spoken_affirmations">Spoken Affirmations</option>
+                        <option value="cook_bake">Cooking and Baking</option>
+                        <option value="space_science">Space and Science Documentary</option>
+                    </select>
+                </div><br><br>
+
+
+            <h2 id="video_heading">Here is some Calming, Relaxing and Reassuring Content for you!</h2>
+            <div class="video-categories">
+                <div>
+                    <h4 id="meditation">Guided Meditation Videos</h4><br>
+                    <iframe id="i1" src="http://www.youtube.com/embed/videoseries?list=PLQiGxGHwiuD1kdxsWKFuhE0rITIXe-7yC"></iframe>
+                    <iframe id="i2" src="http://www.youtube.com/embed/videoseries?list=PL2bRhbfu1XXDVgb6XlysHrC4-gPZ85FRX"></iframe>
+                    <iframe id="i3" src="http://www.youtube.com/embed/videoseries?list=PLDqTr678aIlc1i14hQKknyEko9LLbC0fb"></iframe>
+                </div>
+
+                <div>
+                    <h4 id="nature_sounds">Nature Sounds</h4><br>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLAUTToeGsIqbSyA0P8ZPIosHvmV-1dx2f"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLlvaRq9tQVPrtQsLaG5qMjORUsxKQ5qnx"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLlvaRq9tQVPpsbK8DzrkWxBz5oi7Z6Irl"></iframe>
+                </div>
+
+                <div>
+                    <h4 id="asmr">ASMR Videos</h4><br>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLFjximVveyNXGaGUy5t9y17gnKYkEFDW_"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLDYz3tNki8d1g5g7IHLboV8uGLnNbSdF0"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLrqzSmX84Wsvc8L3RUsMvuxGVPsInl9sQ"></iframe>
+                </div>
+
+                <div>
+                    <h4 id="relax_music">Relaxing Music(Lofi,Piano,etc)</h4><br>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PL6NdkXsPL07KN01gH2vucrHCEyyNmVEx4"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PL2iImUKAZH8yxoeDx0iUvLvIRJFyIqhbc"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PL6NdkXsPL07KqOQymt2EyI03C01U9Opxi"></iframe>
+                </div>
+
+                <div>
+                    <h4 id="animal_video">Wholesome Animal Videos</h4><br>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PL1YxUBRBoo8aZ90JJLvLCK4KaFMwRmvAo"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLFS16myjCH5j3KOA8oiDf5MSyzHh7FpbB"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLeCPQtbuJaPtLugP7UijMU-ozdNmkdNFO"></iframe>
+                </div>
+
+                <div>
+                    <h4 id="studio_ghibli">Studio Ghibli-Inspired Content</h4><br>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLK1-fNTgxG531zrHf9EngzR31tmlUwYro"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLFt83k0o2fZwT3ySqVdZRl8tWG1V2XY4j"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLaMcROZbQyuEuPbfQJlfDojbn53cbHshi"></iframe>
+                </div>
+
+                <div>
+                    <h4 id="spoken_affirmations">Spoken Affirmations</h4><br>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLQ2Wg5HOzACM_CmuUSFPMtuX-hPuSCvkB"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLDqTr678aIle7yb91p2Z9MBY-vDhgAd5V"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLDqTr678aIlfHWQ77mAxYlrxT25DvyOyS"></iframe>
+                </div>
+
+                <div>
+                    <h4 id="cook_bake">Cooking and Baking Videos</h4><br>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLnHi5l6ayGEEXDwVtXyoA8ixgf0L5R9jO"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PL-7QqC0jJT078mbN82fd6E_iQAMStTNoz"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PL-7QqC0jJT06raiyGosckga75s9Zifv9b"></iframe>
+                </div>
+
+                <div>
+                    <h4 id="space_science">Space and Science Documentaries</h4><br>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLzwldUtnA0dEkrBWathrtRLU6GHgAW-B3"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLkoaIad9k4NIlsG6g-almaZH6MzR_T5eV"></iframe>
+                    <iframe id="i4" src="http://www.youtube.com/embed/videoseries?list=PLz58QJ68R9CSuBePNqa16GtYjQmJ_Pdn5"></iframe>
+                </div>
+                
+            </div>
+
+
+
+	<script src="VideosJS.js">
+        const search = document.querySelector("#Game");
+
+        function handleSelect(elm)
+        {
+            document.getElementById(search.value).scrollIntoView({behavior: "smooth", block: "center" });
+            select.value="";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>   
+	
+</body>
+</html>
